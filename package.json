@@ -1,0 +1,53 @@
+{
+  "name": "talon-vscode",
+  "displayName": "Talon Language",
+  "description": "Syntax highlighting + file detection for the Talon expert-system rule language.",
+  "version": "0.1.0",
+  "publisher": "opentalon",
+  "license": "Apache-2.0",
+  "icon": "icon.png",
+  "homepage": "https://github.com/opentalon/talon-vscode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opentalon/talon-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/opentalon/talon-language/issues"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "talon",
+    "expert-system",
+    "rules",
+    "datalog",
+    "opentalon"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "talon",
+        "aliases": [
+          "Talon",
+          "talon"
+        ],
+        "extensions": [
+          ".talon",
+          ".talon.test"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "talon",
+        "scopeName": "source.talon",
+        "path": "./syntaxes/talon.tmLanguage.json"
+      }
+    ]
+  }
+}

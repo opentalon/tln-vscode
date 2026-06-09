@@ -1,0 +1,6 @@
+.git/
+.gitignore
+.vscode/
+.vscodeignore
+*.md.bak
+node_modules/

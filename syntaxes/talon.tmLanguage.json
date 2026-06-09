@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Talon",
+  "scopeName": "source.talon",
+  "fileTypes": ["talon"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#blocks" },
+    { "include": "#modifiers" },
+    { "include": "#ml" },
+    { "include": "#clauses" },
+    { "include": "#string-predicates" },
+    { "include": "#units" },
+    { "include": "#priorities" },
+    { "include": "#constants" },
+    { "include": "#operators" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.talon",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.talon",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.talon",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.talon",
+          "match": "\\\\."
+        },
+        {
+          "name": "variable.other.interpolation.talon",
+          "match": "\\{[^}]*\\}"
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.talon",
+      "match": "\\b-?\\d+(\\.\\d+)?\\b"
+    },
+    "blocks": {
+      "name": "keyword.control.block.talon",
+      "match": "\\b(detect|rule|recommend|combine|define|workflow|predict|forecast|cluster|classify|find|on|constraint|test)\\b"
+    },
+    "modifiers": {
+      "name": "storage.modifier.talon",
+      "match": "\\b(strict|overrides)\\b"
+    },
+    "ml": {
+      "name": "support.function.ml.talon",
+      "match": "\\b(anomaly|using|compared_to|series|over|within|same|similar|related|calculate|threshold|learned_threshold|trained_on|features|confidence|import)\\b"
+    },
+    "clauses": {
+      "name": "keyword.other.clause.talon",
+      "match": "\\b(for|where|when|and|or|not|in|is|has|attr|type|category|status|flag|label|priority|reason|action|allow|block|requires|approval|from|role|suggest|return|best|minimize|maximize|select|subject_to|seed|sequence|coordinates|solver|linear|tune|against|before|after|every|step|depends_on|mcp|invoke|source|require|given|expect|flagged|record)\\b"
+    },
+    "string-predicates": {
+      "name": "keyword.operator.predicate.talon",
+      "match": "\\b(contains|starts_with|ends_with|older_than|newer_than|changed_to)\\b"
+    },
+    "units": {
+      "name": "constant.language.unit.talon",
+      "match": "\\b(days|weeks|months|years|km|last|next|today|matching|records|items|each)\\b"
+    },
+    "priorities": {
+      "name": "support.type.priority.talon",
+      "match": "\\b(LOW|MEDIUM|HIGH|CRITICAL)\\b"
+    },
+    "constants": {
+      "name": "constant.language.talon",
+      "match": "\\b(true|false|context|category_tree)\\b"
+    },
+    "operators": {
+      "name": "keyword.operator.talon",
+      "match": "==|!=|<=|>=|~=|[+\\-*/<>=%]"
+    }
+  }
+}
