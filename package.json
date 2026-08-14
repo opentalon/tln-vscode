@@ -1,18 +1,18 @@
 {
-  "name": "talon-vscode",
-  "displayName": "Talon Language",
-  "description": "Syntax highlighting + file detection for the Talon expert-system rule language.",
+  "name": "tln-vscode",
+  "displayName": "Tln Language",
+  "description": "Syntax highlighting + file detection for the Tln expert-system rule language.",
   "version": "0.1.0",
   "publisher": "opentalon",
   "license": "Apache-2.0",
   "icon": "icon.png",
-  "homepage": "https://github.com/opentalon/talon-vscode",
+  "homepage": "https://github.com/opentalon/tln-vscode",
   "repository": {
     "type": "git",
-    "url": "https://github.com/opentalon/talon-vscode.git"
+    "url": "https://github.com/opentalon/tln-vscode.git"
   },
   "bugs": {
-    "url": "https://github.com/opentalon/talon-language/issues"
+    "url": "https://github.com/opentalon/tln-language/issues"
   },
   "engines": {
     "vscode": "^1.75.0"
@@ -21,7 +21,7 @@
     "Programming Languages"
   ],
   "keywords": [
-    "talon",
+    "tln",
     "expert-system",
     "rules",
     "datalog",
@@ -30,23 +30,23 @@
   "contributes": {
     "languages": [
       {
-        "id": "talon",
+        "id": "tln",
         "aliases": [
-          "Talon",
-          "talon"
+          "Tln",
+          "tln"
         ],
         "extensions": [
-          ".talon",
-          ".talon.test"
+          ".tln",
+          ".tln.test"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "talon",
-        "scopeName": "source.talon",
-        "path": "./syntaxes/talon.tmLanguage.json"
+        "language": "tln",
+        "scopeName": "source.tln",
+        "path": "./syntaxes/tln.tmLanguage.json"
       }
     ]
   }

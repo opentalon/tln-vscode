@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Talon",
-  "scopeName": "source.talon",
-  "fileTypes": ["talon"],
+  "name": "Tln",
+  "scopeName": "source.tln",
+  "fileTypes": ["tln"],
   "patterns": [
     { "include": "#comments" },
     { "include": "#strings" },
@@ -21,69 +21,69 @@
     "comments": {
       "patterns": [
         {
-          "name": "comment.line.double-slash.talon",
+          "name": "comment.line.double-slash.tln",
           "match": "//.*$"
         },
         {
-          "name": "comment.block.talon",
+          "name": "comment.block.tln",
           "begin": "/\\*",
           "end": "\\*/"
         }
       ]
     },
     "strings": {
-      "name": "string.quoted.double.talon",
+      "name": "string.quoted.double.tln",
       "begin": "\"",
       "end": "\"",
       "patterns": [
         {
-          "name": "constant.character.escape.talon",
+          "name": "constant.character.escape.tln",
           "match": "\\\\."
         },
         {
-          "name": "variable.other.interpolation.talon",
+          "name": "variable.other.interpolation.tln",
           "match": "\\{[^}]*\\}"
         }
       ]
     },
     "numbers": {
-      "name": "constant.numeric.talon",
+      "name": "constant.numeric.tln",
       "match": "\\b-?\\d+(\\.\\d+)?\\b"
     },
     "blocks": {
-      "name": "keyword.control.block.talon",
+      "name": "keyword.control.block.tln",
       "match": "\\b(detect|rule|recommend|combine|define|workflow|predict|forecast|cluster|classify|find|on|constraint|test)\\b"
     },
     "modifiers": {
-      "name": "storage.modifier.talon",
+      "name": "storage.modifier.tln",
       "match": "\\b(strict|overrides)\\b"
     },
     "ml": {
-      "name": "support.function.ml.talon",
+      "name": "support.function.ml.tln",
       "match": "\\b(anomaly|using|compared_to|series|over|within|same|similar|related|calculate|threshold|learned_threshold|trained_on|features|confidence|import)\\b"
     },
     "clauses": {
-      "name": "keyword.other.clause.talon",
+      "name": "keyword.other.clause.tln",
       "match": "\\b(for|where|when|and|or|not|in|is|has|attr|type|category|status|flag|label|priority|reason|action|allow|block|requires|approval|from|role|suggest|return|best|minimize|maximize|select|subject_to|seed|sequence|coordinates|solver|linear|tune|against|before|after|every|step|depends_on|mcp|invoke|source|require|given|expect|flagged|record)\\b"
     },
     "string-predicates": {
-      "name": "keyword.operator.predicate.talon",
+      "name": "keyword.operator.predicate.tln",
       "match": "\\b(contains|starts_with|ends_with|older_than|newer_than|changed_to)\\b"
     },
     "units": {
-      "name": "constant.language.unit.talon",
+      "name": "constant.language.unit.tln",
       "match": "\\b(days|weeks|months|years|km|last|next|today|matching|records|items|each)\\b"
     },
     "priorities": {
-      "name": "support.type.priority.talon",
+      "name": "support.type.priority.tln",
       "match": "\\b(LOW|MEDIUM|HIGH|CRITICAL)\\b"
     },
     "constants": {
-      "name": "constant.language.talon",
+      "name": "constant.language.tln",
       "match": "\\b(true|false|context|category_tree)\\b"
     },
     "operators": {
-      "name": "keyword.operator.talon",
+      "name": "keyword.operator.tln",
       "match": "==|!=|<=|>=|~=|[+\\-*/<>=%]"
     }
   }
